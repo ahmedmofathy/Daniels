@@ -1,0 +1,258 @@
+:root {
+  --font-color: #343434;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--font-color);
+}
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0;
+}
+/* .navbar ul li a::after,
+.navbar ul li .active::after {
+    content: '';
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: white;
+}  */
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../imgs/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+header h1,
+header p {
+  font-size: 50px;
+}
+header ul li {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.about img {
+  width: 100%;
+  vertical-align: middle;
+}
+.about .about-image::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  left: -10px;
+  bottom: -30px;
+  z-index: -1;
+}
+.about .progress-bar {
+  --bs-progress-bar-bg: var(--font-color);
+}
+.about .progress {
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+  --bs-progress-height: 1.5rem;
+}
+@media (max-width: 576px) {
+  .about .content {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+}
+.about .btn {
+  --bs-btn-font-size: 0.8rem;
+  transition: 0.5s;
+}
+.about .btn:hover.active {
+  --bs-btn-active-bg: white;
+  color: var(--font-color);
+}
+.services,
+.testimonials,
+.team {
+  background-color: #f7f7f7;
+}
+.services h1::after,
+.portfolio h1::after,
+.testimonials h1::after,
+.team h1::after,
+.contact h1::after {
+  content: "";
+  position: absolute;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  width: 15%;
+  height: 15%;
+  bottom: -10px;
+  right: 50%;
+  transform: translatex(50%);
+}
+.services .icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f7f7f7;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.services .item:hover .icon {
+  background-color: var(--font-color);
+  color: white;
+}
+.portfolio ul li::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--font-color);
+  bottom: -5px;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: 3;
+}
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio .icons div {
+  width: 30px;
+  height: 30px;
+  background-color: var(--font-color);
+  color: white;
+  outline: 2px solid var(--font-color);
+  border-radius: 50%;
+  font-size: small;
+  cursor: pointer;
+}
+.portfolio .icons div:hover {
+  background-color: transparent;
+  color: var(--font-color);
+}
+.portfolio .cover {
+  width: 98%;
+  height: 98%;
+  position: absolute;
+  bottom: -5px;
+  left: 1%;
+  background-color: rgba(255, 255, 255, 0.95);
+  opacity: 0%;
+  transition: 0.5s;
+}
+.portfolio .item:hover .cover {
+  bottom: 1%;
+  opacity: 100%;
+}
+.portfolio .item h6 {
+  transition: 0.5s;
+  position: relative;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.portfolio .item:hover h6 {
+  transform: translateY(20px);
+}
+.testimonials {
+  width: 100%;
+  height: 100vh;
+}
+.testimonials .carousel-item .image {
+  width: 100px;
+}
+.testimonials .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #343434;
+  margin-bottom: 25px;
+}
+
+.numbers .item i {
+  font-size: 35px;
+}
+.team .item .content {
+  width: 100%;
+  background-color: #5b5b5b;
+  color: white;
+}
+.team .item .cover {
+  width: 98%;
+  height: 98%;
+  bottom: 1%;
+  left: 1%;
+  background-color: rgba(255, 255, 255, 0.95);
+  opacity: 0%;
+  transform: rotatey(-180deg) scale(0.5);
+  transition: 0.5s;
+}
+.team .item:hover .cover {
+  transform: rotatey(0deg) scale(1);
+  opacity: 100%;
+  cursor: pointer;
+}
+.team .item .cover span {
+  width: 30px;
+  height: 30px;
+  background-color: var(--font-color);
+  color: white;
+  outline: 2px solid var(--font-color);
+  border-radius: 50%;
+  font-size: small;
+  cursor: pointer;
+  margin: 10px;
+}
+.team .item .cover span:hover {
+  background-color: transparent;
+  color: var(--font-color);
+}
+.team .item img {
+  transition: 0.5s;
+  cursor: pointer;
+  width: 100%;
+}
+.team .item .image:hover img {
+  transform: scale(1.2);
+}
+.contact .item .icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f7f7f7;
+  font-size: 25px;
+  transition: 0.5s;
+}
+.contact .item:hover .icon {
+  background-color: var(--font-color);
+  color: white;
+}
+.contact form input,
+.contact form textarea {
+  background-color: #f7f7f7;
+  border: none;
+}
+.contact .btn:hover.active {
+  --bs-btn-active-bg: white;
+  color: var(--font-color);
+}
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+  background-color: #f7f7f7;
+}
+footer {
+  background-color: var(--font-color);
+  height: 10vh;
+  p {
+    font-size: 12px;
+  }
+}
